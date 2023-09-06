@@ -1,0 +1,11 @@
+GET http://localhost:3030/hello/karim
+
+###
+
+GET http://localhost:3030/hellos
+###
+GET http://localhost:3030/nbreFois
+###
+GET http://localhost:3030/viderFichier
+
+
