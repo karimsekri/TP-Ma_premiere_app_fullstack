@@ -16,6 +16,9 @@ btnAfficherNom.innerText = "Afficher nom";
 const btnViderFichier = document.createElement("button") as HTMLButtonElement;
 btnViderFichier.innerText = "vider le fichier";
 
+const btnAfficherFichier = document.createElement("button") as HTMLButtonElement;
+btnAfficherFichier.innerText = "Afficher le fichier"
+
 const paragraphe = document.createElement("p") as HTMLParagraphElement;
 
 const labelNbreFois = document.createElement("label") as HTMLLabelElement;
@@ -25,6 +28,15 @@ app.appendChild(inputText);
 app.appendChild(btnAfficherNom);
 app.appendChild(paragraphe);
 app.appendChild(btnViderFichier);
+app.appendChild(btnAfficherFichier);
+
+
+btnAfficherFichier.addEventListener("click", async () => {
+  const res = await fetch("/hellos/")
+  const message = await res.text()
+  paragraphe.innerText = message
+  onPageLoad()
+})
 
 
 
